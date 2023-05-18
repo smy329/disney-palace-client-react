@@ -2,7 +2,7 @@
 
 ## **Main Requirements**
 
-2. Make sure to keep the navbar and footer on all the pages **except on the 404-page**. Create a reasonable and meaningful footer. <b>(including website logo, name, copyright, some contact information, social media links, address, etc.)</b>
+2. Make sure to keep the navbar and footer on all the pages **except on the 404-page**.
 
 <br/>
 
@@ -84,8 +84,7 @@
 
    > Show 20 results by default by using `limit`
    >
-   > Implement a search system on this page, based on the **Toy name.**
-   > <br/>
+   > Implement a ch system on this page, based on the **Toy name.** > <br/>
 
    Without logging in, if a user clicks on the **View Details** button, they will be redirected to the Login Page. Make sure to take the user to the Details Page after the user successfully logs in.
 
