@@ -21,15 +21,6 @@
 
    <br/>
 
-   > **Registration Page:** The Registration page will have the Email/Password form having the following fields:
-
-   - Name
-   - Email
-   - Password
-   - Photo URL
-
-   <br/>
-
    > **Note:** Do not enforce the email verification method, as it will inconvenience the examiner. If you want, you can add email verification after receiving the assignment result.
 
 <br/>

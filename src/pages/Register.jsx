@@ -1,6 +1,5 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import { MdCloudDone } from 'react-icons/md';
@@ -204,7 +203,7 @@ const Register = () => {
                 <p className="text-sm font-light text-gray-500 ">
                   Already have an account? &nbsp;
                   <Link
-                    href="/login"
+                    to="/login"
                     className="font-medium text-gray-600 hover:underline"
                   >
                     Sign in
