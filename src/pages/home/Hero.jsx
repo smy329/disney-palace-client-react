@@ -1,4 +1,3 @@
-import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -42,11 +41,10 @@ const Hero = () => {
             />
             <div className="absolute flex items-center gap-5 bottom-0 top-0 left-0 bg-gradient-to-r from-gray-950 to-transparent ">
               <div className="text-white space-y-3 pl-16">
-                <h1 className="text-5xl font-bold">
-                  Anything Your Heart Desires
-                </h1>
-                <p className="text-xl font-medium tracking-wider">
-                  Shop Marvel, Frozen, Moana, Elsa & More
+                <h1 className="text-5xl font-bold">The Magic of Childhood</h1>
+                <p className="text-xl font-medium tracking-wider w-3/5">
+                  Shop the latest Disney toys from classic characters to new
+                  favorites.
                 </p>
               </div>
             </div>
@@ -104,12 +102,10 @@ const Hero = () => {
           <SwiperSlide>
             <img src={slider5} alt="" className="w-full h-[calc(100vh-50px)]" />
             <div className="absolute flex items-center gap-5 bottom-0 top-0 left-0 bg-gradient-to-r from-gray-950 to-transparent ">
-              <div className="text-white space-y-3 pl-16">
-                <h1 className="text-5xl font-bold">
-                  Anything Your Heart Desires
-                </h1>
+              <div className="text-white space-y-3 pl-16 w-4/5">
+                <h1 className="text-5xl font-bold">Where Dreams Come True</h1>
                 <p className="text-xl font-medium tracking-wider">
-                  Shop Marvel, Frozen, Moana, Elsa & More
+                  Shop the ultimate collection of Disney toys for kids
                 </p>
               </div>
             </div>
