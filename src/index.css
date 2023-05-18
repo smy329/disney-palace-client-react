@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.theme-btn {
+  @apply bg-primary hover:bg-secondary text-white text-base px-5 py-2.5 rounded-lg focus:ring-4 focus:outline-none font-bold text-center;
+}
+
+.theme-input {
+  @apply bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:border-2 block w-full p-2.5 outline-none focus:border-blue-600;
+}
+
+.active {
+  @apply font-medium tracking-wide text-primary transition-colors duration-200;
+}
+
+.default {
+  @apply font-medium tracking-wide text-black transition-colors duration-200;
+}

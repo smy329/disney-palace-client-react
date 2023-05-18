@@ -2,7 +2,7 @@ import { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { HiUserCircle } from 'react-icons/hi2';
 import logo from '../../../src/assets/logo.png';
-//import { AuthContext } from '../../providers/AuthProviders';
+import { AuthContext } from '../../providers/AuthProvider';
 //import { Tooltip } from 'react-tooltip';
 
 import 'react-tooltip/dist/react-tooltip.css';
@@ -10,7 +10,7 @@ import { Tooltip } from 'react-tooltip';
 
 const Navbar = () => {
   //const { user, logOut } = useContext(AuthContext);
-  const { user, logOut } = { name: 'abc' };
+  const { user, logOut } = useContext(AuthContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   console.log(isMenuOpen);
 

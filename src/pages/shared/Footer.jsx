@@ -29,7 +29,7 @@ const Footer = () => {
                 © 2023&nbsp;
                 <Link
                   href="https://facebook.com/cyasir"
-                  class="hover:underline"
+                  className="hover:underline"
                 >
                   Disney Palace™
                 </Link>
@@ -38,7 +38,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <ul className=" leading-[45px] font-normal text-lg">
+            <ul className=" leading-10 font-normal text-base">
               <li className="font-bold text-lg mb-5">About Us</li>
               <li className="hover:text-primary hover:font-medium hover:translate-x-5 transition-all duration-200 ">
                 Careers
@@ -58,7 +58,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <ul className=" leading-[45px] font-normal text-lg">
+            <ul className=" leading-10 font-normal text-base">
               <li className="font-bold text-lg mb-5">Services</li>
               <li className="hover:text-primary hover:font-medium hover:translate-x-5 transition-all duration-200 ">
                 Gift Card
@@ -78,7 +78,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <ul className=" leading-[45px] font-normal text-lg">
+            <ul className=" leading-10 font-normal text-base">
               <li className="font-bold text-lg mb-5">Help</li>
               <li className="hover:text-primary hover:font-medium hover:translate-x-5 transition-all duration-200 ">
                 Shopcart Helps
