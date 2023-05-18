@@ -23,6 +23,14 @@ const Navbar = () => {
         console.log(error.message);
       });
   };
+
+  const handleAddToy = () => {
+    console.log('add toy');
+  };
+
+  const handleMyToys = () => {
+    console.log('My Toys');
+  };
   return (
     <div className="relative mb-5 container mx-auto">
       <Tooltip id="profile-name" />
@@ -31,7 +39,7 @@ const Navbar = () => {
           <img src={logo} alt="disney palace logo" className="h-16 w-16" />
           <h1 className="font-extrabold text-3xl">Palace</h1>
         </div>
-        <div className="navbar-end md:navbar-center hidden md:flex flex-grow flex-col md:flex-row ">
+        <div className="md:navbar-center hidden md:flex flex-col md:flex-row ">
           <div className="flex flex-col md:flex-row text-right md:text-center items-center">
             <NavLink
               className={`text-base font-medium p-2 md:p-5 text-black hover:text-primary tracking-wide`}
@@ -39,14 +47,6 @@ const Navbar = () => {
             >
               Home
             </NavLink>
-
-            <NavLink
-              className="text-base font-medium p-2 md:p-5 text-black hover:text-primary tracking-wide "
-              to="/blog"
-            >
-              All Toys
-            </NavLink>
-
             <NavLink
               className="text-base font-medium p-2 md:p-5 text-black hover:text-primary tracking-wide "
               to="/blog"
@@ -54,8 +54,27 @@ const Navbar = () => {
               Blog
             </NavLink>
 
+            <NavLink
+              className="text-base font-medium p-2 md:p-5 text-black hover:text-primary tracking-wide "
+              to="/all-toys"
+            >
+              All Toys
+            </NavLink>
+
             {user ? (
               <>
+                <Link
+                  className="text-base font-medium p-2 md:p-5 text-black hover:text-primary tracking-wide "
+                  to="/add-toy"
+                >
+                  Add A Toy
+                </Link>
+                <Link
+                  className="text-base font-medium p-2 md:p-5 text-black hover:text-primary tracking-wide "
+                  to="/my-toys"
+                >
+                  My Toys
+                </Link>
                 <Link
                   className="text-base font-medium p-2 md:p-5 text-black hover:text-primary tracking-wide "
                   onClick={handleLogout}

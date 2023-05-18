@@ -4,28 +4,7 @@
 
 2. Make sure to keep the navbar and footer on all the pages **except on the 404-page**.
 
-<br/>
-
-3. Your website should have a navbar with the **Website logo, Website name, Home, All Toys, My Toys, Add A Toy, Blogs,** and **User profile picture**.
-   > **Note:** The **User profile picture, Add A Toy** and **My Toys** on the navbar are conditional based on login. If the user is logged in, the navbar will show the profile picture; otherwise, it will show the **Login button**. If the username is available, the user's name will be visible when the mouse hovers over the profile picture.
-
-<br/>
-
-4. **`Login & Registration systems:`** On the Registration and Login pages, display relevant error messages when necessary.
-
-   > **Login Page:** When a user clicks on the login button, they will be redirected to the login page having the following:
-
-   - Email/Password
-   - Google Sign-in
-   - A link that will redirect to the registration page
-
-   <br/>
-
-   > **Note:** Do not enforce the email verification method, as it will inconvenience the examiner. If you want, you can add email verification after receiving the assignment result.
-
-<br/>
-
-5. **` Home page:`**
+3. **` Home page:`**
 
    - **Banner section** -A slider/banner/ a meaningful section.
 

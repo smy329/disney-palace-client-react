@@ -32,7 +32,7 @@ const Login = () => {
         emailInput
       )
     ) {
-      setLoginError('PLease provide a valid email');
+      setLoginError('Please provide a valid email');
     } else {
       setLoginError('');
     }
@@ -59,7 +59,7 @@ const Login = () => {
         navigate(from || '/', { replace: true });
       })
       .catch((error) => {
-        setLoginError(error.message);
+        setLoginError('Invalid Username or Password');
         console.log(error.message);
       });
   };

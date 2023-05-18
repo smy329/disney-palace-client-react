@@ -30,11 +30,25 @@ const Register = () => {
     const emailInput = e.target.value;
     setEmail(emailInput);
     console.log(email);
+    if (
+      !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+        emailInput
+      )
+    ) {
+      setRegError('Please provide a valid email');
+    } else {
+      setRegError('');
+    }
   };
 
   const handlePassword = (e) => {
     const passwordInput = e.target.value;
     setPassword(passwordInput);
+    if (passwordInput.length < 6) {
+      setRegError('Password must be at least 6 digits');
+    } else {
+      setRegError('');
+    }
   };
 
   const handleRegister = (e) => {
@@ -53,7 +67,7 @@ const Register = () => {
         console.log(registeredUser);
       })
       .catch((error) => {
-        setRegError(error.message);
+        setRegError('Registration failed. Please try agin later!!');
         console.log(error.message);
       });
   };
