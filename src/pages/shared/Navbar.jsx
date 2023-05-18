@@ -3,10 +3,10 @@ import { Link, NavLink } from 'react-router-dom';
 import { HiUserCircle } from 'react-icons/hi2';
 import logo from '../../../src/assets/logo.png';
 import { AuthContext } from '../../providers/AuthProvider';
-//import { Tooltip } from 'react-tooltip';
 
-import 'react-tooltip/dist/react-tooltip.css';
+//tooltip
 import { Tooltip } from 'react-tooltip';
+import 'react-tooltip/dist/react-tooltip.css';
 
 const Navbar = () => {
   //const { user, logOut } = useContext(AuthContext);
@@ -25,6 +25,7 @@ const Navbar = () => {
   };
   return (
     <div className="relative mb-5 container mx-auto">
+      <Tooltip id="profile-name" />
       <div className=" navbar">
         <div className="navbar-start">
           <img src={logo} alt="disney palace logo" className="h-16 w-16" />
@@ -53,8 +54,6 @@ const Navbar = () => {
               Blog
             </NavLink>
 
-            <Tooltip id="my-tooltip" />
-
             {user ? (
               <>
                 <Link
@@ -69,7 +68,7 @@ const Navbar = () => {
                       src={user.photoURL}
                       alt=""
                       className=" h-8 w-8 rounded-full"
-                      data-tooltip-id="my-tooltip"
+                      data-tooltip-id="profile-name"
                       data-tooltip-content={user.displayName}
                     />
                   ) : (
