@@ -39,16 +39,6 @@
 
 7. **` All Toys`** page: Create an All Toys page where you will see the toys all the users have added in the tabular form. Each row of the All Toys table/list will have the following information:
 
-   - Seller: (if available) show the name of the person who posted the toy
-   - Toy Name
-   - Sub-category
-   - Price
-   - Available Quantity
-   - View Details button
-     <br/>
-
-   > Show 20 results by default by using `limit`
-   >
    > Implement a search system on this page, based on the **Toy name.** > <br/>
 
    Without logging in, if a user clicks on the **View Details** button, they will be redirected to the Login Page. Make sure to take the user to the Details Page after the user successfully logs in.

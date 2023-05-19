@@ -1,7 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import SearchToys from '../componenets/SearchToys';
 
 const AllToys = () => {
   const [toys, setToys] = useState([]);
+  const [searchKey, setSearchKey] = useState('');
+  const [updatedToyList, setUpdatedToyList] = useState(toys);
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    const searchInput = e.target.value;
+    setSearchKey(searchInput);
+    //console.log(searchKey);
+  };
+  //console.log(updatedToyList);
+
+  useEffect(() => {
+    const searchedToy = toys.filter((toy) =>
+      toy.name.toLowerCase().includes(searchKey.toLowerCase())
+    );
+    setUpdatedToyList(searchedToy);
+  }, [searchKey, toys]);
 
   useEffect(() => {
     fetch('http://localhost:5000/toys')
@@ -10,9 +28,9 @@ const AllToys = () => {
       .catch((error) => console.log(error.message));
   }, []);
 
-  console.log(toys[0]?.name.slice(0, 60));
   return (
     <div className="container mx-auto mb-20 w-full">
+      <SearchToys searchKey={searchKey} handleSearch={handleSearch} />
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
           {/* head */}
@@ -33,37 +51,35 @@ const AllToys = () => {
           <tbody className="text-center">
             {/* row 1 */}
             {}
-            {toys.map((toy) => (
-              <>
-                <tr>
-                  {/* <th>
+            {updatedToyList.map((toy) => (
+              <tr key={toy._id}>
+                {/* <th>
                     <label>
                       <input type="checkbox" className="checkbox" />
                     </label>
                   </th> */}
-                  <td>
-                    <div className="flex items-center space-x-3">
-                      <div>
-                        <div className="font-bold">
-                          {toy.name.slice(0, 50)}...
-                        </div>
-                        <div className="text-sm opacity-60 text-left">
-                          {toy.sellerName}{' '}
-                          <span className="badge badge-ghost">Seller</span>
-                        </div>
+                <td>
+                  <div className="flex items-center space-x-3">
+                    <div>
+                      <div className="font-bold">
+                        {toy.name.slice(0, 50)}...
+                      </div>
+                      <div className="text-sm opacity-60 text-left">
+                        {toy.sellerName}{' '}
+                        <span className="badge badge-ghost">Seller</span>
                       </div>
                     </div>
-                  </td>
-                  <td>{toy.subCategory}</td>
-                  <td>${toy.price}</td>
-                  <td>{toy.availableQuantity}</td>
-                  <th>
-                    <button className="btn bg-primary border-primary hover:bg-secondary hover:border-secondary btn-xs ">
-                      View Details
-                    </button>
-                  </th>
-                </tr>
-              </>
+                  </div>
+                </td>
+                <td>{toy.subCategory}</td>
+                <td>${toy.price}</td>
+                <td>{toy.availableQuantity}</td>
+                <th>
+                  <button className="btn bg-primary border-primary hover:bg-secondary hover:border-secondary btn-xs ">
+                    View Details
+                  </button>
+                </th>
+              </tr>
             ))}
           </tbody>
           {/* foot */}
