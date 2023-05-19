@@ -35,25 +35,7 @@
 
    <br/>
 
-<br/>
-
-7. **` All Toys`** page: Create an All Toys page where you will see the toys all the users have added in the tabular form. Each row of the All Toys table/list will have the following information:
-
-   > Implement a search system on this page, based on the **Toy name.** > <br/>
-
-   Without logging in, if a user clicks on the **View Details** button, they will be redirected to the Login Page. Make sure to take the user to the Details Page after the user successfully logs in.
-
-<br/>
-
-8. **`Single toy details route will be a private route:`**
-
-   > After clicking on the **View Details** button, he/ she will be redirected to the **Toys Details** route **( /toy/:id )** containing the information **( picture, toy name, seller name, seller email, price, rating, available quantity, and detail description)**
-   >
-   > (optional) If possible, display the view details in a modal
-
-<br/>
-
-9. **` Add A Toy page will be a private route:`**
+7. **` Add A Toy page will be a private route:`**
    <br/>
 
    > Create an **Add A Toy** page where there will be a form having the following fields:
@@ -118,8 +100,6 @@
 
 6. Give your website name. The website title will be changed according to the route you are clicking. Suppose your website name is PHero. Then, on the **‘about’** route, your website title will be **‘PHero | About us’**.
 
-7. Make the component name, folder structure, and route name meaningful. If needed, add comments.
-
 <br/>
 
 ---
@@ -150,45 +130,8 @@
 
 5. Add extra features of your own. This will help you in the future to differentiate your project from others.
 
-<br/>
-<hr/>
-<br/>
-
-### **Additional information:**
-
-1. You can use a local or host image anywhere or use pictures from the internet. And it's ok if you have the image url, but the image link doesn't work.
-2. You can use vanilla CSS or any CSS library (Bootstrap, tailwind) you want. If you wish, you can use both Bootstrap and react-bootstrap. Also, if you want, you can use any tailwind component library such as DaisyUI, etc.
-3. Try to host your site on Firebase (Netlify hosting will need some extra configurations)
-4. Host your server-side application on Vercel. If needed, you can host somewhere else as well.
-5. Make Sure you deploy server-side and client-side on the first day. If you have any issues with hosting or GitHub push, please join the "Github and deploy" related support session.
-
-<br/>
-<hr/>
-<br/>
-
 ### **What to submit:**
 
 1. Your client-side code GitHub repository
 2. Your server-side code GitHub repository
 3. Your live website link
-
-<br/>
-<hr/>
-<br/>
-
-### **Some Guidelines:**
-
-1. Do not waste much time on the website idea. Just spend 15-20 minutes deciding, find a sample website, and start working on it.
-2. Do not waste much time finding the right image. You can always start with a simple idea. Make the website and then add different images.
-3. Don't look at the overall task list. Just take one task at a time and do it. Once it's done, pick the next task. If you get stuck on a particular task, move on to the next task.
-4. Stay calm, think before coding, and work sequentially. You will make it.
-5. Be strategic about the electricity issue.
-6. use `chatgpt` to generate JSON data. You can use chatGPT for Yother purposes as well.
-
-<br/>
-<hr/>
-<br/>
-
-### No Pain, No Gain:
-
-`The most beautiful moments in life comes after going through hardships and challenges.`

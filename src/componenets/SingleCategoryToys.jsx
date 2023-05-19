@@ -1,5 +1,5 @@
 import { Rating } from '@smastrom/react-rating';
-import '@smastrom/react-rating/style.css';
+
 
 const SingleCategoryToys = ({ tc }) => {
   const { name, picture, price, rating } = tc;
@@ -10,7 +10,7 @@ const SingleCategoryToys = ({ tc }) => {
           <img
             src={picture}
             alt={name}
-            className="w-full h-72 object-top object-cover object-scale-down"
+            className="w-full h-72 object-top object-scale-down"
           />
         </figure>
         <div className="card-body">
