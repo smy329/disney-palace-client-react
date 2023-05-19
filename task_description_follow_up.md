@@ -6,7 +6,6 @@
 
 3. **` Home page:`**
 
-   - **Gallery Section** - Show relevant pictures. Try to make it attractive.
    - **Shop by category**- Implement a tab system for **Shop by category** section. Explore [React-tabs](https://www.npmjs.com/package/react-tabs), or you can implement this using custom CSS. There will be 3 tabs, each containing sub-categories of the category you have chosen.
      <br/>
 
@@ -52,7 +51,7 @@
 
    > Show 20 results by default by using `limit`
    >
-   > Implement a ch system on this page, based on the **Toy name.** > <br/>
+   > Implement a search system on this page, based on the **Toy name.** > <br/>
 
    Without logging in, if a user clicks on the **View Details** button, they will be redirected to the Login Page. Make sure to take the user to the Details Page after the user successfully logs in.
 
