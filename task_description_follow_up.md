@@ -99,15 +99,7 @@
 
 11. For all the CRUD operations, show relevant toast/ notification/ anything with a meaningful message
 
-<br/>
-
-12. **`404 page:`**
-
-    > Create a 404 page. Add any interesting jpg/ gif on the 404 page. **Do not add header & footer on this page.** Just add a jpg/ gif & a **Back to home** button. The**Back to home** button will redirect the user to the home page.
-
-<br/>
-
-13. Use the Environment variable to hide the Firebase config keys and Mongodb credentials.
+12. Use the Environment variable to hide the Firebase config keys and Mongodb credentials.
 
 <hr/>
 <br/>
