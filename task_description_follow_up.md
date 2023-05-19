@@ -2,8 +2,6 @@
 
 ## **Main Requirements**
 
-2. Make sure to keep the navbar and footer on all the pages **except on the 404-page**.
-
 3. **` Home page:`**
 
    - **Shop by category**- Implement a tab system for **Shop by category** section. Explore [React-tabs](https://www.npmjs.com/package/react-tabs), or you can implement this using custom CSS. There will be 3 tabs, each containing sub-categories of the category you have chosen.
