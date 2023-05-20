@@ -44,7 +44,7 @@ const AddToy = () => {
       description,
     };
     console.log(toyData);
-    fetch('http://localhost:5000/toys', {
+    fetch('https://disney-palace-server.vercel.app/toys', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

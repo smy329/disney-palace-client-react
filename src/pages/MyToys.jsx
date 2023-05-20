@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { Link, useParams } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const MyToys = () => {
   const params = useParams();
@@ -75,6 +76,35 @@ const MyToys = () => {
     //form.reset();
   };
 
+  const handleDelete = (id) => {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/my-toys/${id}`, {
+          method: 'DELETE',
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            if (data.deletedCount > 0) {
+              toast.success('The toy has been deleted successfully');
+              //you may got another idea to get it done by using useeffect dependency, bt that way causes infinite llop of data fatching
+              const remaining = myToys.filter((toy) => toy._id !== id);
+              setMyToys(remaining);
+            }
+          })
+          .catch((error) => console.log(error.message));
+      }
+    });
+  };
+
   console.log('modal data', modalData);
   return (
     <div className="container mx-auto mb-20 w-full">
@@ -135,11 +165,14 @@ const MyToys = () => {
                     </label>
                     {/* <UpdateMyToys /> */}
 
-                    <Link to={`/toy-details/${toy._id}`}>
-                      <button className="btn bg-grayPrimary border-grayPrimary hover:bg-graySecondary hover:border-graySecondary btn-xs ">
-                        Delete
-                      </button>
-                    </Link>
+                    <button
+                      className="btn bg-grayPrimary border-grayPrimary hover:bg-graySecondary hover:border-graySecondary btn-xs "
+                      onClick={() => {
+                        handleDelete(toy._id);
+                      }}
+                    >
+                      Delete
+                    </button>
                   </div>
                 </th>
               </tr>
