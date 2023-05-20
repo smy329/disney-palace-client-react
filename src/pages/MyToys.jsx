@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import useTitle from '../hooks/useTitle';
 
 const MyToys = () => {
+  useTitle('My Toys');
   const params = useParams();
   const [myToys, setMyToys] = useState([]);
   const [modalData, setModalData] = useState();
@@ -73,7 +75,7 @@ const MyToys = () => {
         }
       })
       .catch((error) => console.log(error.message));
-    //form.reset();
+    form.reset();
   };
 
   const handleDelete = (id) => {

@@ -2,8 +2,10 @@ import { useContext, useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
+import useTitle from '../hooks/useTitle';
 
 const AddToy = () => {
+  useTitle('Add Toy');
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
   const [subCategories, setSubCategories] = useState([]);

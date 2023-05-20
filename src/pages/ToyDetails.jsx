@@ -1,8 +1,10 @@
 import { Rating } from '@smastrom/react-rating';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import useTitle from '../hooks/useTitle';
 
 const ToyDetails = () => {
+  useTitle('Toy Details');
   const params = useParams();
   const [toyDetails, setToysDetails] = useState({});
 

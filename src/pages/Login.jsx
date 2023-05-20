@@ -11,8 +11,10 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import logo from '../assets/logo.png';
 import { MdCloudDone } from 'react-icons/md';
+import useTitle from '../hooks/useTitle';
 
 const Login = () => {
+  useTitle('Login');
   const { user, setUser, logInWithEmail, loginWithGoogle, loginWithGithub } =
     useContext(AuthContext);
   const [email, setEmail] = useState('');

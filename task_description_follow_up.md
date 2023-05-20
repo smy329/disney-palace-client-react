@@ -26,44 +26,9 @@
 
 <br/>
 
-6. **` Blogs`** page: Create a Blog where you will have to answer the following questions:
-
-   - What is an access token and refresh token? How do they work and where should we store them on the client-side?
-   - Compare SQL and NoSQL databases?
-   - What is express js? What is Nest JS (google it)?
-   - What is MongoDB aggregate and how does it work (google it)?
-
-7. **`My Toys page will be private routes:`** If a user logs in, they will see the My Toys page, which it will show all the toys information they have added from the Add A Toy page in a tabular form. Each row will have an update and delete button.
-   <br/>
-
-   - **Update Action** - If they click the `update` button, they can update the Toy information (Price, available quantity, Detail description) <br/><br/>
-     > **Note:** you can show the update form in a modal or another route.
-
-   <br/>
-
-   - **Delete Action** - If they click the delete button, the Toy will be removed from the list. Before the delete, ask for a delete confirmation.
-     <br/>
-     <br/> > **Note:** If a user logs in they will only see the toys they have added. The user cannot see the toys other users added.
-     <br/>
-
-<br/>
-
 11. For all the CRUD operations, show relevant toast/ notification/ anything with a meaningful message
 
-12. Use the Environment variable to hide the Firebase config keys and Mongodb credentials.
-
-<hr/>
-<br/>
-
 ## **Bonus Requirements**
-
-1. **Commits & readme:**
-
-   - Minimum 18 meaningful git commits on the client-side repository.
-   - Minimum 8 meaningful commits on the server-side repository.
-   - Create a readme for client-side and write about your project (at least 5 bullet points). ** Remember to add your client-side live link to your website here.**
-
-<br/>
 
 2. **Reload:** If you reload the protected/private routes (after login), this page will not redirect the user to the login page. Instead, it will keep the logged-in user on the protected route.
 
@@ -76,16 +41,6 @@
 <br/>
 
 5. On the **My Toys** page, you must implement a sorting system to sort the toys in **descending** and **ascending** orders based on the **price**. (Explore MongoDB sorting operation & implement it on the backend). The design of the sorting system depends on you.
-
-<br/>
-
-6. Give your website name. The website title will be changed according to the route you are clicking. Suppose your website name is PHero. Then, on the **‘about’** route, your website title will be **‘PHero | About us’**.
-
-<br/>
-
----
-
-<br/>
 
 ## **Optional (But Highly Recommended):**
 

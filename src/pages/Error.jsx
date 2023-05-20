@@ -1,7 +1,8 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import useTitle from '../hooks/useTitle';
 
 const Error = () => {
+  useTitle('404');
   const navigate = useNavigate();
   return (
     <div className='bg-[url("https://i.ibb.co/JsFZF0p/404.jpg")] bg-gray-800 bg-center bg-no-repeat h-screen relative'>

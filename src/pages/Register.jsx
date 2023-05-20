@@ -3,8 +3,10 @@ import { AuthContext } from '../providers/AuthProvider';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import { MdCloudDone } from 'react-icons/md';
+import useTitle from '../hooks/useTitle';
 
 const Register = () => {
+  useTitle('Register');
   const { user, setUser, createUserWithEmail, updateUserProfile } =
     useContext(AuthContext);
   const navigate = useNavigate();
