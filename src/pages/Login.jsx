@@ -79,20 +79,6 @@ const Login = () => {
       });
   };
 
-  const handleGithubLogin = (e) => {
-    e.preventDefault();
-    loginWithGithub()
-      .then((result) => {
-        const loggedUser = result.user;
-        setUser(loggedUser);
-        setLoginError('');
-        navigate(from || '/', { replace: true });
-      })
-      .catch((error) => {
-        setLoginError(error.message);
-        console.log(error.message);
-      });
-  };
   return (
     <div className="bg-gray-50">
       <section className="container mx-auto grid grid-cols-2 gap-8  py-10 ">

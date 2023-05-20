@@ -23,7 +23,7 @@ const AllToys = () => {
   }, [searchKey, toys]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/toys')
+    fetch('https://disney-palace-server.vercel.app/toys')
       .then((response) => response.json())
       .then((data) => setToys(data))
       .catch((error) => console.log(error.message));

@@ -6,6 +6,10 @@
   @apply bg-primary hover:bg-secondary text-white text-base px-5 py-2.5 rounded-lg focus:ring-4 focus:outline-none font-bold text-center;
 }
 
+.theme-btn-secondary {
+  @apply bg-grayPrimary hover:bg-graySecondary text-white text-base px-5 py-2.5 rounded-lg focus:ring-4 focus:outline-none font-bold text-center;
+}
+
 .theme-input {
   @apply bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:border-2 block w-full p-2.5 outline-none focus:border-blue-600;
 }

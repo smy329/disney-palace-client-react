@@ -7,7 +7,9 @@ const ToyDetails = () => {
   const [toyDetails, setToysDetails] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/toys/6467833e796a3f4753d2888f`)
+    fetch(
+      `https://disney-palace-server.vercel.app/toys/6467833e796a3f4753d2888f`
+    )
       .then((response) => response.json())
       .then((data) => setToysDetails(data))
       .catch((error) => error.message);

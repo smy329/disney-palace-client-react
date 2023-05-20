@@ -10,7 +10,7 @@ const ShopCategory = () => {
   const selectedTabHandler = (name) => {
     setSelectedTab(name);
     console.log(name);
-    fetch(`http://localhost:5000/category-toys/${name}`)
+    fetch(`https://disney-palace-server.vercel.app/category-toys/${name}`)
       .then((response) => response.json())
       .then((data) => setTabContent(data))
       .catch((error) => console.log(error.message));
@@ -24,7 +24,7 @@ const ShopCategory = () => {
   }, []);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/category-toys/${tabs[0]?.name}`)
+    fetch(`https://disney-palace-server.vercel.app/category-toys/${tabs[0]?.name}`)
       .then((response) => response.json())
       .then((data) => setTabContent(data))
       .catch((error) => console.log(error.message));
