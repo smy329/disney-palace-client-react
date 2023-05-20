@@ -17,7 +17,7 @@ const AllToys = () => {
 
   useEffect(() => {
     const searchedToy = toys.filter((toy) =>
-      toy.name.toLowerCase().includes(searchKey.toLowerCase())
+      toy?.name?.toLowerCase().includes(searchKey.toLowerCase())
     );
     setUpdatedToyList(searchedToy);
   }, [searchKey, toys]);

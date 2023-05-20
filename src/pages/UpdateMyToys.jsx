@@ -1,66 +1,18 @@
-import { useContext, useEffect, useState } from 'react';
-import { toast } from 'react-hot-toast';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../providers/AuthProvider';
 
-const AddToy = () => {
-  const { user } = useContext(AuthContext);
+const UpdateMyToys = () => {
   const navigate = useNavigate();
   const [subCategories, setSubCategories] = useState([]);
   const [selectedSubCategory, setSelectedSubCategory] = useState('');
 
+  //fetching data from mongoDB
   useEffect(() => {
-    fetch('https://disney-palace-server.vercel.app/sub-categories')
+    fetch('http://localhost:5000/sub-/my-toys/update/:id')
       .then((response) => response.json())
       .then((data) => setSubCategories(data))
       .catch((error) => console.log(error.message));
   }, []);
-
-  const handleSelectSubCategory = (event) => {
-    setSelectedSubCategory(event.target.value);
-  };
-
-  const handleAddToy = (event) => {
-    event.preventDefault();
-    const form = event.target;
-    const name = form.name.value;
-    const picture = form.toyImg.value;
-    const subCategory = form.subCategory.value;
-    const price = form.price.value;
-    const availableQuantity = form.availableQuantity.value;
-    const rating = form.rating.value;
-    const sellerName = form.sellerName.value;
-    const sellerEmail = form.sellerEmail.value;
-    const description = form.description.value;
-    const toyData = {
-      name,
-      picture,
-      subCategory,
-      price,
-      availableQuantity,
-      rating,
-      sellerName,
-      sellerEmail,
-      description,
-    };
-    console.log(toyData);
-    fetch('http://localhost:5000/toys', {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify(toyData),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        if (data.insertedId) {
-          toast.success('A new toy has been added successfully');
-        }
-      })
-      .catch((error) => console.log(error.message));
-    //form.reset();
-  };
 
   const handleGoBack = () => {
     navigate(-1);
@@ -71,7 +23,7 @@ const AddToy = () => {
       <form
         action=""
         className="space-y-4 md:space-y-6 w-4/5 mx-auto"
-        onSubmit={handleAddToy}
+        onSubmit={handleUpdateToy}
       >
         <div className="flex gap-8">
           <div className="flex-1">
@@ -255,4 +207,4 @@ const AddToy = () => {
   );
 };
 
-export default AddToy;
+export default UpdateMyToys;

@@ -71,7 +71,7 @@ const Navbar = () => {
                 </Link>
                 <Link
                   className="text-base font-medium p-2 md:p-5 text-black hover:text-primary tracking-wide "
-                  to="/my-toys"
+                  to={`/my-toys/${user.email}`}
                 >
                   My Toys
                 </Link>
