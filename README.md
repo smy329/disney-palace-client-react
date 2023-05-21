@@ -2,9 +2,9 @@
 
 ### Live Website Link: https://disney-palace.web.app/
 
-# Disney Toy Marketplace
+# Disney Palace Marketplace
 
-The Disney Toy Marketplace is an online platform where users can explore and purchase various kinds of Disney toys. This marketplace provides a wide range of Disney toys along with detailed information, pricing, available quantity, and seller information for each toy. In addition, authenticated sellers have the ability to upload, update, and delete their toy products.
+The Disney Palace Marketplace is an online platform where users can explore and purchase various kinds of Disney toys. This marketplace provides a wide range of Disney toys along with detailed information, pricing, available quantity, and seller information for each toy. In addition, authenticated sellers have the ability to upload, update, and delete their toy products.
 
 ## Features
 
@@ -35,4 +35,4 @@ Note: Make sure to have Node.js and MongoDB installed on system before starting 
 
 ## Conclusion
 
-The Disney Toy Marketplace is a dynamic and user-friendly web application that brings together Disney toy enthusiasts and sellers. It offers a seamless shopping experience with a vast collection of toys, detailed information, and authenticated seller features. By leveraging the power of React.js and Express.js, this marketplace provides an engaging platform for users to explore, buy, and sell Disney toys.
+The Disney Palace Marketplace is a dynamic and user-friendly web application that brings together Disney toy enthusiasts and sellers. It offers a seamless shopping experience with a vast collection of toys, detailed information, and authenticated seller features. By leveraging the power of React.js and Express.js, this marketplace provides an engaging platform for users to explore, buy, and sell Disney toys.

@@ -4,7 +4,7 @@ import service3 from '../../assets/images/services/service3.png';
 
 const ServicesToHelp = () => {
   return (
-    <div className="space-y-5 container mx-auto px-5 ">
+    <div className="space-y-5 container mx-auto px-5">
       <div
         className="flex flex-col items-center text-center space-y-5 mb-10"
         data-aos="fade-up"

@@ -1,9 +1,8 @@
-import React from 'react';
 
 const Cashback = () => {
   // https://i.ibb.co/CMyZB9r/cashback.jpg
   return (
-    <div className='bg-[url("https://i.ibb.co/84bDXLw/cashback.png")]  md:bg-cover md:bg-center bg-no-repeat w-full h-[420px] md:h-screen relative'>
+    <div className='bg-[url("https://i.ibb.co/84bDXLw/cashback.png")]  md:bg-cover md:bg-center md:bg-fixed bg-no-repeat w-full h-[420px] md:h-screen relative'>
       <div
         className="bg-primary absolute -bottom-10 md:bottom-10 right-0 md:right-10 text-white w-full md:w-2/5 px-5 md:px-12 py-3 md:py-16 rounded-3xl"
         data-aos="zoom-out"

@@ -12,7 +12,7 @@ const ShopCategory = () => {
     setSelectedTab(name);
     console.log(name);
     const tabContentCRUD = fetch(
-      `http://localhost:5000/toys/subCategory/${name}`
+      `https://disney-palace-server.vercel.app/toys/subCategory/${name}`
     )
       .then((response) => response.json())
       .then((data) => setTabContent(data))
@@ -41,7 +41,7 @@ const ShopCategory = () => {
 
   useEffect(() => {
     const firstTabContentCRUD = fetch(
-      `http://localhost:5000/toys/subCategory/${tabs[0]?.name}`
+      `https://disney-palace-server.vercel.app/toys/subCategory/${tabs[0]?.name}`
     )
       .then((response) => response.json())
       .then((data) => setTabContent(data))

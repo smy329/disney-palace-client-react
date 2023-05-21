@@ -41,7 +41,9 @@ const MyToys = () => {
   }, []);
 
   const showModalData = (id) => {
-    const modalDataCRUD = fetch(`http://localhost:5000/toys/${id}`)
+    const modalDataCRUD = fetch(
+      `https://disney-palace-server.vercel.app/toys/${id}`
+    )
       .then((response) => response.json())
       .then((data) => setModalData(data))
       .catch((error) => console.log(error.message));
@@ -80,13 +82,16 @@ const MyToys = () => {
       description,
     };
     console.log(updatedToyData);
-    fetch(`http://localhost:5000/my-toys/update/${modalData._id}`, {
-      method: 'PUT',
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify(updatedToyData),
-    })
+    fetch(
+      `https://disney-palace-server.vercel.app/my-toys/update/${modalData._id}`,
+      {
+        method: 'PUT',
+        headers: {
+          'content-type': 'application/json',
+        },
+        body: JSON.stringify(updatedToyData),
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -109,7 +114,7 @@ const MyToys = () => {
       confirmButtonText: 'Yes, delete it!',
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/my-toys/${id}`, {
+        fetch(`https://disney-palace-server.vercel.app/my-toys/${id}`, {
           method: 'DELETE',
         })
           .then((response) => response.json())
@@ -128,7 +133,9 @@ const MyToys = () => {
   };
 
   const handleDesc = () => {
-    const descCRUD = fetch(`http://localhost:5000/my-toys/sort/desc`)
+    const descCRUD = fetch(
+      `https://disney-palace-server.vercel.app/my-toys/sort/desc`
+    )
       .then((response) => response.json())
       .then((data) => setMyToys(data))
       .catch((error) => console.log(error.message));
@@ -140,7 +147,9 @@ const MyToys = () => {
   };
 
   const handleAsc = () => {
-    const ascCRUD = fetch(`http://localhost:5000/my-toys/sort/asc`)
+    const ascCRUD = fetch(
+      `https://disney-palace-server.vercel.app/my-toys/sort/asc`
+    )
       .then((response) => response.json())
       .then((data) => setMyToys(data))
       .catch((error) => console.log(error.message));
@@ -450,7 +459,7 @@ const MyToys = () => {
                   className="theme-btn-secondary flex-1"
                   htmlFor="my-modal-5"
                 >
-                  Back
+                  Close
                 </label>
                 <button className="theme-btn flex-1">Update Your Toy</button>
               </div>
