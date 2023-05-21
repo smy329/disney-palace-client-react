@@ -2,10 +2,6 @@
 
 - **Extra Section:** Add two relevant sections. Try to make them attractive.
 
-## **Bonus Requirements**
-
-4. On the **My Toys** page, you must implement a sorting system to sort the toys in **descending** and **ascending** orders based on the **price**. (Explore MongoDB sorting operation & implement it on the backend). The design of the sorting system depends on you.
-
 ## **Optional (But Highly Recommended):**
 
 1. Implement a JWT token in your routes.

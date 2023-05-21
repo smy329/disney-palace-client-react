@@ -13,7 +13,9 @@ const MyToys = () => {
   const [selectedSubCategory, setSelectedSubCategory] = useState('');
 
   useEffect(() => {
-    const myPromise = fetch(`http://localhost:5000/my-toys/${params.email}`)
+    const myPromise = fetch(
+      `https://disney-palace-server.vercel.app/my-toys/${params.email}`
+    )
       .then((response) => response.json())
       .then((data) => setMyToys(data))
       .catch((error) => console.log(error.message));

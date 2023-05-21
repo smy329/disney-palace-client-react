@@ -4,6 +4,7 @@ import Gallery from './Gallery';
 import ShopCategory from './ShopCategory';
 import useTitle from '../../hooks/useTitle';
 import AOS from 'aos';
+import ServicesToHelp from './ServicesToHelp';
 
 const Home = () => {
   useTitle('Home');
@@ -15,6 +16,7 @@ const Home = () => {
       <Hero />
       <Gallery />
       <ShopCategory />
+      <ServicesToHelp />
     </div>
   );
 };
