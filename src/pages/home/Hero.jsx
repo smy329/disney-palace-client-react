@@ -18,7 +18,7 @@ import slider5 from '../../assets/images/sliders/slider5.jpg';
 const Hero = () => {
   return (
     <div data-aos="fade-up" data-aos-duration="2000">
-      <div className="relative">
+      <div className="relative container mx-auto">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}

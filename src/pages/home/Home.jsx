@@ -5,6 +5,7 @@ import ShopCategory from './ShopCategory';
 import useTitle from '../../hooks/useTitle';
 import AOS from 'aos';
 import ServicesToHelp from './ServicesToHelp';
+import Cashback from './Cashback';
 
 const Home = () => {
   useTitle('Home');
@@ -12,10 +13,11 @@ const Home = () => {
     AOS.init();
   }, []);
   return (
-    <div className="container mx-auto space-y-20">
+    <div className=" space-y-20">
       <Hero />
       <Gallery />
       <ShopCategory />
+      <Cashback />
       <ServicesToHelp />
     </div>
   );

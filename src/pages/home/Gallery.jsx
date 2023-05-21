@@ -19,14 +19,14 @@ import gallery10 from '../../assets/images/dolls/10.jpg';
 
 const Gallery = () => {
   return (
-    <div className="space-y-5">
+    <div className="space-y-5 container mx-auto px-5">
       <div
         className="flex flex-col items-center text-center space-y-5"
         data-aos="fade-up"
         data-aos-duration="1000"
       >
         <h1 className="text-5xl font-bold text-black">Our Top Collections</h1>
-        <p className="text-xl font-medium tracking-wide w-3/5 text-slate-500 ">
+        <p className="text-xl font-medium tracking-wide w-full md:w-3/5 text-slate-500 ">
           Discover the magic of Disney with our wide selection of toys for kids
           of all ages.
         </p>

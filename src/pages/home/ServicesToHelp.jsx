@@ -4,16 +4,16 @@ import service3 from '../../assets/images/services/service3.png';
 
 const ServicesToHelp = () => {
   return (
-    <div className="space-y-5">
+    <div className="space-y-5 container mx-auto px-5 ">
       <div
-        className="flex flex-col items-center text-center space-y-5"
+        className="flex flex-col items-center text-center space-y-5 mb-10"
         data-aos="fade-up"
         data-aos-duration="1000"
       >
         <h1 className="text-5xl font-bold text-black">
           Services To Help You Shop
         </h1>
-        <p className="text-xl font-medium tracking-wide w-3/5 text-slate-500 ">
+        <p className="text-xl font-medium tracking-wide w-11/12 md:w-3/5 text-slate-500 ">
           Explore our curated selection of services designed to enhance your
           Disney toy shopping experience in our exclusive marketplace.{' '}
         </p>
