@@ -1,46 +1,12 @@
-    - Disney dolls (Disney princes, frozen dolls, animation characters, donald duck, etc.),
-
 ## **Main Requirements**
 
-3. **` Home page:`**
-
-   - **Shop by category**- Implement a tab system for **Shop by category** section. Explore [React-tabs](https://www.npmjs.com/package/react-tabs), or you can implement this using custom CSS. There will be 3 tabs, each containing sub-categories of the category you have chosen.
-     <br/>
-
-   > For example, if the website is based on **Educational and learning toys**, the sub-categories for the **3** tabs can be **Math Toys, Language Toys, engineering toys, and Science Toys, etc.**. You need at least 3 sub-categories.
-   > <br/>
-
-   > Each tab will have minimum 2 toys, and each toy will have the following information:
-
-   - Picture,
-   - Name,
-   - Price,
-   - Rating and
-   - View Details button.
-
-   <br/>
-           
-   > **Note:** When a user is not logged in and if he/ she clicks on the View Details button, notify the user with a message **“You have to log in first to view details”** by using a toast/ notification/ anything. Also, redirect him/ her to the login page. Without a login, you can not visit the single toy details page.
-
-   - **Extra Section:** Add two relevant sections. Try to make them attractive.
-
-<br/>
-
-11. For all the CRUD operations, show relevant toast/ notification/ anything with a meaningful message
+- **Extra Section:** Add two relevant sections. Try to make them attractive.
 
 ## **Bonus Requirements**
 
-2. **Reload:** If you reload the protected/private routes (after login), this page will not redirect the user to the login page. Instead, it will keep the logged-in user on the protected route.
-
 3. Make Home page of your website mobile & desktop responsive (tablet responsive is optional)
 
-<br/>
-
-4. Use the [AOS Package](https://www.npmjs.com/package/aos) in the home page. At least in one place on the home page. Using AOS on other pages is optional.
-
-<br/>
-
-5. On the **My Toys** page, you must implement a sorting system to sort the toys in **descending** and **ascending** orders based on the **price**. (Explore MongoDB sorting operation & implement it on the backend). The design of the sorting system depends on you.
+4. On the **My Toys** page, you must implement a sorting system to sort the toys in **descending** and **ascending** orders based on the **price**. (Explore MongoDB sorting operation & implement it on the backend). The design of the sorting system depends on you.
 
 ## **Optional (But Highly Recommended):**
 

@@ -20,7 +20,11 @@ import gallery10 from '../../assets/images/dolls/10.jpg';
 const Gallery = () => {
   return (
     <div className="space-y-5">
-      <div className="flex flex-col items-center text-center space-y-5">
+      <div
+        className="flex flex-col items-center text-center space-y-5"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         <h1 className="text-5xl font-bold text-black">Our Top Collections</h1>
         <p className="text-xl font-medium tracking-wide w-3/5 text-slate-500 ">
           Discover the magic of Disney with our wide selection of toys for kids
@@ -28,7 +32,7 @@ const Gallery = () => {
         </p>
       </div>
       <div className="flex justify-between px-16 py-10 ">
-        <div className="relative">
+        <div data-aos="flip-left" data-aos-duration="1000">
           <Swiper
             effect={'cards'}
             grabCursor={true}
@@ -59,7 +63,7 @@ const Gallery = () => {
             </SwiperSlide>
           </Swiper>
         </div>
-        <div>
+        <div data-aos="flip-left" data-aos-duration="1000">
           <Swiper
             effect={'cards'}
             grabCursor={true}
@@ -90,7 +94,7 @@ const Gallery = () => {
             </SwiperSlide>
           </Swiper>
         </div>
-        <div>
+        <div data-aos="flip-left" data-aos-duration="1000">
           <Swiper
             effect={'cards'}
             grabCursor={true}

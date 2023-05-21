@@ -12,10 +12,15 @@ const AddToy = () => {
   const [selectedSubCategory, setSelectedSubCategory] = useState('');
 
   useEffect(() => {
-    fetch('https://disney-palace-server.vercel.app/sub-categories')
+    const myPromise = fetch('https://disney-palace-server.vercel.app/sub-categories')
       .then((response) => response.json())
       .then((data) => setSubCategories(data))
       .catch((error) => console.log(error.message));
+    toast.promise(myPromise, {
+      loading: 'Loading...',
+      success: 'All sub categories fetched successfully',
+      error: 'Error when fetching',
+    });
   }, []);
 
   const handleSelectSubCategory = (event) => {
@@ -61,7 +66,7 @@ const AddToy = () => {
         }
       })
       .catch((error) => console.log(error.message));
-    //form.reset();
+    form.reset();
   };
 
   const handleGoBack = () => {

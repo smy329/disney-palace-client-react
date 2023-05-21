@@ -1,8 +1,8 @@
 import { Rating } from '@smastrom/react-rating';
-
+import { Link } from 'react-router-dom';
 
 const SingleCategoryToys = ({ tc }) => {
-  const { name, picture, price, rating } = tc;
+  const { _id, name, picture, price, rating } = tc;
   return (
     <div>
       <div className="card w-full bg-base-100 shadow-xl">
@@ -25,7 +25,9 @@ const SingleCategoryToys = ({ tc }) => {
             </span>
           </div>
           <p className="text-3xl font-semibold">${price}</p>
-          <button className="theme-btn"> View details</button>
+          <Link to={`/toy-details/${_id}`}>
+            <button className="theme-btn"> View details</button>
+          </Link>
         </div>
       </div>
     </div>

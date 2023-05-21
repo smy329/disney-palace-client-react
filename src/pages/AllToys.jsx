@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import SearchToys from '../componenets/SearchToys';
 import { Link } from 'react-router-dom';
 import useTitle from '../hooks/useTitle';
+import { toast } from 'react-hot-toast';
 
 const AllToys = () => {
   useTitle('All Toys');
@@ -25,10 +26,15 @@ const AllToys = () => {
   }, [searchKey, toys]);
 
   useEffect(() => {
-    fetch('https://disney-palace-server.vercel.app/toys')
+    const myPromise = fetch('https://disney-palace-server.vercel.app/toys')
       .then((response) => response.json())
       .then((data) => setToys(data))
       .catch((error) => console.log(error.message));
+    toast.promise(myPromise, {
+      loading: 'Loading...',
+      success: 'All toys fetched successfully',
+      error: 'Error when fetching',
+    });
   }, []);
 
   return (

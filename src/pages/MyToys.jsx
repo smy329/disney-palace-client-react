@@ -13,23 +13,41 @@ const MyToys = () => {
   const [selectedSubCategory, setSelectedSubCategory] = useState('');
 
   useEffect(() => {
-    fetch(`http://localhost:5000/my-toys/${params.email}`)
+    const myPromise = fetch(`http://localhost:5000/my-toys/${params.email}`)
       .then((response) => response.json())
       .then((data) => setMyToys(data))
       .catch((error) => console.log(error.message));
+    toast.promise(myPromise, {
+      loading: 'Loading...',
+      success: 'My toys fetched successfully',
+      error: 'Error when fetching',
+    });
   }, [params.email]);
 
   useEffect(() => {
-    fetch('https://disney-palace-server.vercel.app/sub-categories')
+    const subCategoriesFromDB = fetch(
+      'https://disney-palace-server.vercel.app/sub-categories'
+    )
       .then((response) => response.json())
       .then((data) => setSubCategories(data))
       .catch((error) => console.log(error.message));
+    toast.promise(subCategoriesFromDB, {
+      loading: 'Loading...',
+      success: 'All Sub categories fetched successfully',
+      error: 'Error when fetching',
+    });
   }, []);
 
   const showModalData = (id) => {
-    fetch(`http://localhost:5000/toys/${id}`)
+    const modalDataCRUD = fetch(`http://localhost:5000/toys/${id}`)
       .then((response) => response.json())
-      .then((data) => setModalData(data));
+      .then((data) => setModalData(data))
+      .catch((error) => console.log(error.message));
+    toast.promise(modalDataCRUD, {
+      loading: 'Loading...',
+      success: 'Modal data fetched successfully',
+      error: 'Error when fetching',
+    });
   };
 
   const handleSelectSubCategory = (event) => {

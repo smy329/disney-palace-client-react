@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { FlipProvider, useFlip } from 'react-easy-flip';
 import SingleCategoryToys from '../../componenets/SingleCategoryToys';
+import { toast } from 'react-hot-toast';
 
 const ShopCategory = () => {
   const [tabs, setTabs] = useState([]);
@@ -10,24 +11,46 @@ const ShopCategory = () => {
   const selectedTabHandler = (name) => {
     setSelectedTab(name);
     console.log(name);
-    fetch(`https://disney-palace-server.vercel.app/category-toys/${name}`)
+    const tabContentCRUD = fetch(
+      `http://localhost:5000/toys/subCategory/${name}`
+    )
       .then((response) => response.json())
       .then((data) => setTabContent(data))
       .catch((error) => console.log(error.message));
+    toast.promise(tabContentCRUD, {
+      loading: 'Loading...',
+      success: 'Tab Contents fetched successfully',
+      error: 'Error when fetching',
+    });
   };
 
+  //fetching sun categories
   useEffect(() => {
-    fetch('https://disney-palace-server.vercel.app/sub-categories')
+    const subCategoriesCRUD = fetch(
+      'https://disney-palace-server.vercel.app/sub-categories'
+    )
       .then((response) => response.json())
       .then((data) => setTabs(data))
       .catch((error) => console.log(error.message));
+    toast.promise(subCategoriesCRUD, {
+      loading: 'Loading...',
+      success: 'Sub categories fetched successfully',
+      error: 'Error when fetching',
+    });
   }, []);
 
   useEffect(() => {
-    fetch(`https://disney-palace-server.vercel.app/category-toys/${tabs[0]?.name}`)
+    const firstTabContentCRUD = fetch(
+      `http://localhost:5000/toys/subCategory/${tabs[0]?.name}`
+    )
       .then((response) => response.json())
       .then((data) => setTabContent(data))
       .catch((error) => console.log(error.message));
+    toast.promise(firstTabContentCRUD, {
+      loading: 'Loading...',
+      success: 'Tab contents fetched successfully',
+      error: 'Error when fetching',
+    });
   }, [tabs]);
 
   const animationOption = {
@@ -39,7 +62,7 @@ const ShopCategory = () => {
 
   return (
     <FlipProvider>
-      <div className="space-y-8">
+      <div className="space-y-8" data-aos="fade-up" data-aos-duration="1000">
         <div className="flex flex-col items-center text-center space-y-5">
           <h1 className="text-5xl font-bold text-black">
             Shop Our Top Categories

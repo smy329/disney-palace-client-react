@@ -17,7 +17,7 @@ import slider5 from '../../assets/images/sliders/slider5.jpg';
 
 const Hero = () => {
   return (
-    <div>
+    <div data-aos="fade-up" data-aos-duration="2000">
       <div className="relative">
         <Swiper
           spaceBetween={30}
@@ -37,12 +37,12 @@ const Hero = () => {
             <img
               src={slider1}
               alt=""
-              className="w-full h-[calc(100vh-50px)] object-cover"
+              className="w-full h-[calc(100vh-500px)] md:h-[calc(100vh-50px)] object-cover"
             />
             <div className="absolute flex items-center gap-5 bottom-0 top-0 left-0 bg-gradient-to-r from-gray-950 to-transparent ">
-              <div className="text-white space-y-3 pl-16">
-                <h1 className="text-5xl font-bold">The Magic of Childhood</h1>
-                <p className="text-xl font-medium tracking-wider w-3/5">
+              <div className="text-white space-y-3 pl-3 md:pl-16  text-center md:text-left">
+                <h1 className="text-5xl font-bold ">The Magic of Childhood</h1>
+                <p className="text-xl font-medium tracking-wider w-full md:w-3/5">
                   Shop the latest Disney toys from classic characters to new
                   favorites.
                 </p>
@@ -53,14 +53,14 @@ const Hero = () => {
             <img
               src={slider2}
               alt=""
-              className="w-full h-[calc(100vh-50px)] object-cover"
+              className="w-full h-[calc(100vh-500px)] md:h-[calc(100vh-50px)] object-cover"
             />
             <div className="absolute flex items-center gap-5 bottom-0 top-0 left-0 bg-gradient-to-r from-gray-950 to-transparent ">
-              <div className="text-white space-y-3 pl-16">
+              <div className="text-white space-y-3 pl-3 md:pl-16 text-center md:text-left">
                 <h1 className="text-5xl font-bold">
                   Explore What&apos;s Trending
                 </h1>
-                <p className="text-xl font-medium tracking-wider">
+                <p className="text-xl font-medium tracking-wider w-full md:w-3/5">
                   Feel Our Amazing Toy Collection
                 </p>
               </div>
@@ -70,12 +70,12 @@ const Hero = () => {
             <img
               src={slider3}
               alt=""
-              className="w-full h-[calc(100vh-50px)] object-cover"
+              className="w-full h-[calc(100vh-500px)] md:h-[calc(100vh-50px)] object-cover"
             />
             <div className="absolute flex items-center gap-5 bottom-0 top-0 left-0 bg-gradient-to-r from-gray-950 to-transparent ">
-              <div className="text-white space-y-3 pl-16">
+              <div className="text-white space-y-3 pl-3 md:pl-16 text-center md:text-left">
                 <h1 className="text-5xl font-bold">Best Disney Toys</h1>
-                <p className="text-xl font-medium tracking-wider w-3/5">
+                <p className="text-xl font-medium tracking-wider w-full md:w-3/5">
                   Whether you are looking for the most popular dolls for your
                   little one, we have it all and more.
                 </p>
@@ -86,25 +86,29 @@ const Hero = () => {
             <img
               src={slider4}
               alt=""
-              className="w-full h-[calc(100vh-50px)] object-cover"
+              className="w-full h-[calc(100vh-500px)] md:h-[calc(100vh-50px)] object-cover"
             />
             <div className="absolute flex items-center gap-5 bottom-0 top-0 left-0 bg-gradient-to-r from-gray-950 to-transparent ">
-              <div className="text-white space-y-3 pl-16">
+              <div className="text-white space-y-3 pl-3 md:pl-16 text-center md:text-left">
                 <h1 className="text-5xl font-bold">
                   Anything Your Heart Desires
                 </h1>
-                <p className="text-xl font-medium tracking-wider">
+                <p className="text-xl font-medium tracking-wider w-full md:w-3/5">
                   Shop Marvel, Frozen, Moana, Elsa & More
                 </p>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={slider5} alt="" className="w-full h-[calc(100vh-50px)]" />
+            <img
+              src={slider5}
+              alt=""
+              className="w-full h-[calc(100vh-500px)] md:h-[calc(100vh-50px)]"
+            />
             <div className="absolute flex items-center gap-5 bottom-0 top-0 left-0 bg-gradient-to-r from-gray-950 to-transparent ">
-              <div className="text-white space-y-3 pl-16 w-4/5">
+              <div className="text-white space-y-3 pl-3 md:pl-16 text-center md:text-left">
                 <h1 className="text-5xl font-bold">Where Dreams Come True</h1>
-                <p className="text-xl font-medium tracking-wider">
+                <p className="text-xl font-medium tracking-wider w-full md:w-3/5">
                   Shop the ultimate collection of Disney toys for kids
                 </p>
               </div>

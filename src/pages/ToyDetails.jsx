@@ -1,5 +1,5 @@
 import { Rating } from '@smastrom/react-rating';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import useTitle from '../hooks/useTitle';
 
@@ -9,9 +9,7 @@ const ToyDetails = () => {
   const [toyDetails, setToysDetails] = useState({});
 
   useEffect(() => {
-    fetch(
-      `https://disney-palace-server.vercel.app/toys/6467833e796a3f4753d2888f`
-    )
+    fetch(`https://disney-palace-server.vercel.app/toys/${params.id}`)
       .then((response) => response.json())
       .then((data) => setToysDetails(data))
       .catch((error) => error.message);
@@ -20,7 +18,6 @@ const ToyDetails = () => {
   console.log(toyDetails);
   return (
     <div className="container mx-auto mb-20">
-      ToyDetails: {params.id}
       <div className="card lg:card-side bg-base-100 shadow-xl grid grid-cols-2 gap-5">
         <figure className=" ">
           <img
