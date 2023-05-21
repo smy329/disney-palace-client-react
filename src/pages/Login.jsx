@@ -52,7 +52,7 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    const emailLoginPromise = logInWithEmail(email, password)
+    logInWithEmail(email, password)
       .then((result) => {
         const loggedUser = result.user;
         setUser(loggedUser);
@@ -64,11 +64,6 @@ const Login = () => {
         setLoginError('Invalid Username or Password');
         console.log(error.message);
       });
-    toast.promise(emailLoginPromise, {
-      loading: 'Logging...',
-      success: () => `Successfully saved`,
-      error: (err) => `This just happened: ${err.toString()}`,
-    });
   };
 
   const handleGoogleLogin = (e) => {
