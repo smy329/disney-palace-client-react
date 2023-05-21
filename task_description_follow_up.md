@@ -4,8 +4,6 @@
 
 ## **Bonus Requirements**
 
-3. Make Home page of your website mobile & desktop responsive (tablet responsive is optional)
-
 4. On the **My Toys** page, you must implement a sorting system to sort the toys in **descending** and **ascending** orders based on the **price**. (Explore MongoDB sorting operation & implement it on the backend). The design of the sorting system depends on you.
 
 ## **Optional (But Highly Recommended):**

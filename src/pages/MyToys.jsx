@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import useTitle from '../hooks/useTitle';
 
@@ -22,7 +22,7 @@ const MyToys = () => {
       success: 'My toys fetched successfully',
       error: 'Error when fetching',
     });
-  }, [params.email]);
+  }, []);
 
   useEffect(() => {
     const subCategoriesFromDB = fetch(
@@ -125,10 +125,54 @@ const MyToys = () => {
     });
   };
 
-  console.log('modal data', modalData);
+  const handleDesc = () => {
+    const descCRUD = fetch(`http://localhost:5000/my-toys/sort/desc`)
+      .then((response) => response.json())
+      .then((data) => setMyToys(data))
+      .catch((error) => console.log(error.message));
+    toast.promise(descCRUD, {
+      loading: 'Loading...',
+      success: 'Successfully sorted in descending order',
+      error: 'Error when fetching',
+    });
+  };
+
+  const handleAsc = () => {
+    const ascCRUD = fetch(`http://localhost:5000/my-toys/sort/asc`)
+      .then((response) => response.json())
+      .then((data) => setMyToys(data))
+      .catch((error) => console.log(error.message));
+    toast.promise(ascCRUD, {
+      loading: 'Loading...',
+      success: 'Successfully sorted in ascending order',
+      error: 'Error when fetching',
+    });
+  };
+
   return (
     <div className="container mx-auto mb-20 w-full">
       <div className="overflow-x-auto w-full">
+        {/* sorting dropdown */}
+        <div className="flex justify-end">
+          <div className="dropdown dropdown-hover">
+            <label tabIndex={0} className="btn btn-md theme-btn m-1 ">
+              <span className="text-sm">Sort By</span>
+            </label>
+            <ul
+              tabIndex={0}
+              className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <Link onClick={handleDesc}>Descending</Link>
+              </li>
+              <li>
+                <Link onClick={handleAsc}>Ascending</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+        {/* sorting dropdown end */}
+
         <table className="table w-full">
           {/* head */}
           <thead className="text-center">

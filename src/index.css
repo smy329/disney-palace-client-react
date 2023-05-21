@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .theme-btn {
-  @apply bg-primary hover:bg-secondary text-white text-base px-5 py-2.5 rounded-lg focus:ring-4 focus:outline-none font-bold text-center;
+  @apply bg-primary border-secondary hover:bg-secondary hover:border-secondary focus:border-secondary  text-white text-base px-5 py-2.5 rounded-lg focus:ring-4 focus:outline-none font-bold text-center;
 }
 
 .theme-btn-secondary {
