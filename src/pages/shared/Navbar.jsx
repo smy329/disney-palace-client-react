@@ -172,6 +172,12 @@ const Navbar = () => {
                     >
                       Home
                     </NavLink>
+                    <NavLink
+                      className="text-base font-medium p-2 md:p-5 text-black hover:text-primary tracking-wide "
+                      to="/blog"
+                    >
+                      Blogs
+                    </NavLink>
 
                     <NavLink
                       className="text-base font-medium p-2 md:p-5 text-black hover:text-primary tracking-wide "
@@ -180,13 +186,7 @@ const Navbar = () => {
                       All Toys
                     </NavLink>
 
-                    <NavLink
-                      className="text-base font-medium p-2 md:p-5 text-black hover:text-primary tracking-wide "
-                      to="/blog"
-                    >
-                      Blogs
-                    </NavLink>
-                    {user ? (
+                    {/* {user ? (
                       <>
                         <Link
                           className="text-base font-medium p-2 md:p-5 text-black hover:text-primary tracking-wide "
@@ -201,6 +201,56 @@ const Navbar = () => {
                               alt=""
                               className=" h-8 w-8 rounded-full"
                               data-tooltip-id="my-tooltip"
+                              data-tooltip-content={user.displayName}
+                            />
+                          ) : (
+                            <HiUserCircle className="h-8 w-8 " />
+                          )}
+                        </span>
+                      </>
+                    ) : (
+                      <>
+                        <NavLink
+                          className="text-base font-medium p-2 md:p-5 text-black hover:text-primary tracking-wide "
+                          to="/login"
+                        >
+                          Login
+                        </NavLink>
+                        <NavLink
+                          className="text-base font-medium p-2 md:p-5 text-black hover:text-primary tracking-wide "
+                          to="/register"
+                        >
+                          <button className="theme-btn">Register Now</button>
+                        </NavLink>
+                      </>
+                    )} */}
+                    {user ? (
+                      <>
+                        <Link
+                          className="text-base font-medium p-2 md:p-5 text-black hover:text-primary tracking-wide "
+                          to="/add-toy"
+                        >
+                          Add A Toy
+                        </Link>
+                        <Link
+                          className="text-base font-medium p-2 md:p-5 text-black hover:text-primary tracking-wide "
+                          to={`/my-toys/${user.email}`}
+                        >
+                          My Toys
+                        </Link>
+                        <Link
+                          className="text-base font-medium p-2 md:p-5 text-black hover:text-primary tracking-wide "
+                          onClick={handleLogout}
+                        >
+                          Logout
+                        </Link>
+                        <span className="flex items-center justify-end p-2 md:p-5">
+                          {user.photoURL ? (
+                            <img
+                              src={user.photoURL}
+                              alt=""
+                              className=" h-8 w-8 rounded-full"
+                              data-tooltip-id="profile-name"
                               data-tooltip-content={user.displayName}
                             />
                           ) : (

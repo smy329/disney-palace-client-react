@@ -7,7 +7,7 @@ const Footer = () => {
     <div className="bg-primary bg-opacity-20">
       <div className="container mx-auto">
         <div className=" grid grid-cols-1 text-center md:text-left md:grid-cols-5 gap-5 py-20 px-5 ml-5">
-          <div className="col-span-2 space-y-5">
+          <div className="col-span-1 md:col-span-2 space-y-5">
             <div className="flex items-end">
               <img src={logo} alt="disney palace logo" className="h-16 w-16" />
               <h1 className="font-extrabold text-2xl">Palace</h1>

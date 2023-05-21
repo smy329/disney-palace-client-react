@@ -78,16 +78,16 @@ const ShopCategory = () => {
           className="w-full flex justify-center pt-3"
           data-flip-root-id={flipRootId}
         >
-          <div className="flex gap-10 items-center justify-center w-2/4">
+          <div className="flex flex-col md:flex-row gap-3 md:gap-10 items-center justify-center w-2/4">
             {tabs?.map((tabItem) => {
               return (
                 <div
                   onClick={() => selectedTabHandler(tabItem.name)}
-                  className="w-full cursor-pointer text-center hover:text-primary"
+                  className="w-full cursor-pointer text-center hover:text-primary "
                   key={tabItem._id}
                 >
                   {/* here i am making first letter capital */}
-                  <span className="text-xl tracking-wide font-medium">
+                  <span className="text-xl tracking-wide font-medium ">
                     {tabItem.name.charAt(0).toUpperCase() +
                       tabItem.name.slice(1)}
                   </span>
@@ -105,7 +105,7 @@ const ShopCategory = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 px-3">
           {tabContent.map((tc) => (
             <SingleCategoryToys key={tc._id} tc={tc} />
           ))}

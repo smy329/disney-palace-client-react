@@ -31,7 +31,7 @@ const Gallery = () => {
           of all ages.
         </p>
       </div>
-      <div className="flex justify-between px-16 py-10 ">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 justify-between px-3 md:px-16 py-10 ">
         <div data-aos="flip-left" data-aos-duration="1000">
           <Swiper
             effect={'cards'}
